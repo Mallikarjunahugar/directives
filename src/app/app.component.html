@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="show()">Display Details</button>
+<p *ngIf="showSecret">Secret password = xyz</p>
+<div *ngFor="let logItem of log" 
+[ngStyle]="{backgroundColor: logItem >= 6 ? 'red' : ' yellow'}"
+[ngClass]="{'white-text':logItem >= 6 }"
+>{{logItem}}</div>
